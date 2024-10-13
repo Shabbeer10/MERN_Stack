@@ -1,4 +1,8 @@
-const router = XPathExpression.Router();
+import express from "express";
+import db from "../db/connection.js"
+import { ObjectId } from "mongodb";
+
+const router = express.Router();
 
 //Get a list of all the records
 router.get("/", async (req,res) => {
