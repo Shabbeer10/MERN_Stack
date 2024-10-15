@@ -15,7 +15,7 @@
 
 ## Introduction
 
-This is a simple MERN stack application that allows users to [briefly describe the app's purpose, e.g., manage tasks, share notes, etc.]. It leverages MongoDB, Express.js, React, and Node.js to provide a full-stack development experience.
+This is a simple MERN stack application. It leverages MongoDB, Express.js, React, and Node.js to provide a full-stack development experience.
 
 ## Technologies Used
 
