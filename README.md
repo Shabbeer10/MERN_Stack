@@ -1,6 +1,6 @@
 # MERN Stack Application
 
-![MERN Stack](https://user-images.githubusercontent.com/your-image-url)
+![MERN Stack](https://)
 
 ## Table of Contents
 
@@ -23,7 +23,6 @@ This is a simple MERN stack application. It leverages MongoDB, Express.js, React
 - **Express.js**: Web framework for Node.js
 - **React**: Frontend library for building user interfaces
 - **Node.js**: JavaScript runtime for server-side programming
-- **Redux** (optional): State management for React applications
 
 ## Eventual Features
 
