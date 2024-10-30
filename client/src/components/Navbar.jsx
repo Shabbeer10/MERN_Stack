@@ -5,7 +5,7 @@ export default function Navbar() {
         <div>
             <nav>
                 <navLink to='/'>
-                    <img className="h-10-inline" src="https://placeholder.com" alt="MongoDB logo" />
+                    <img src="https://placeholder.com" alt="MongoDB logo" />
                 </navLink>
                 <navLink>
                     Create Employee
