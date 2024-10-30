@@ -49,7 +49,13 @@ To get started with this application, follow these steps:
    cd your-repo-name
    ```
 
-2. **Run the server with**:
+2. **Install Dependencies**:
+
+   ```bash
+   npm install -D
+   ```
+
+3. **Run the server with**:
 
    ```bash
    node --env-file=config.env server
