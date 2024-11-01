@@ -114,7 +114,7 @@ export default function Record(){
                                 id = "position"
                                 placeholder="Developer Advocate"
                                 value={form.position}
-                                onChange={(e)=> updateForm({name: e.target.value})}
+                                onChange={(e)=> updateForm({position: e.target.value})}
                                 />
                             </div>
                         </div>
@@ -124,22 +124,39 @@ export default function Record(){
                             <legend>Position Options</legend>
                             <div>
                                 <div>
-                                <input
-                                type="radio"
-                                name= "positionOptions"
-                                id = "position"
-                                value= "Intern"
-                                checked= {form.level == "Intern"}
-                                onChange={(e)=> updateForm({name: e.target.value})}
-                                />
-                                <label htmlFor="positionIntern">
-                                    Intern
-                                </label>
+                                    <input
+                                    type="radio"
+                                    name= "positionOptions"
+                                    id = "positionIntern"
+                                    value= "Intern"
+                                    checked= {form.level == "Intern"}
+                                    onChange={(e)=> updateForm({level: e.target.value})}
+                                    />
+                                    <label htmlFor="positionIntern">Intern</label>
+
+                                    <input
+                                    type="radio"
+                                    name= "positionOptions"
+                                    id = "positionJunior"
+                                    value= "Junior"
+                                    checked= {form.level == "Junior"}
+                                    onChange={(e)=> updateForm({level: e.target.value})} />
+                                    <label htmlFor="positionJunior">Junior</label>
+
+                                    <input
+                                    type="radio"
+                                    name= "positionOptions"
+                                    id = "positionSenior"
+                                    value= "Senior"
+                                    checked= {form.level == "Senior"}
+                                    onChange={(e)=> updateForm({level: e.target.value})} />
+                                    <label htmlFor="positionSenior" >Senior</label>
                                 </div>
                             </div>
                         </fieldset>
                     </div>
                 </div>
+                <input type="submit" value="Save Employee Record" className="text-red-600 bg-zinc-800" />
             </form>
         </>
     )

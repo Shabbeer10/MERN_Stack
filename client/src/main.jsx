@@ -29,11 +29,11 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: '/create/:id',
+    path: '/create',
     element: <App/>,
     children: [
       {
-        path: '/create/:id',
+        path: '/create',
         element: <Record/>,
       },
     ],

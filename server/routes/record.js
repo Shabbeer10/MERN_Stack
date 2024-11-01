@@ -8,7 +8,7 @@ const router = express.Router();
 router.get("/", async (req,res) => {
     let collection = await db.collection("records");
     let result = await collection.find({}).toArray();
-    res.send(results).status(200);
+    res.send(result).status(200);
 });
 
 // get a single record via id
