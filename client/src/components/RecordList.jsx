@@ -78,7 +78,7 @@ export default function RecordList() {
 
     return (
         <>
-            <h3 style={{ color: "#FF6F00" }}>Employee Records</h3>
+            <h2 style={{ fontSize:"2rem", color: "#FF6F00", textAlign: "center" }}>Employee Records</h2>
             <div>
                 <div>
                     <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -89,8 +89,8 @@ export default function RecordList() {
                                 <th>Level</th>
                                 <th>Action</th>
                             </tr>
-                        </thead>
-                        <tbody>{recordList()}</tbody>
+                        </thead >
+                        <tbody style={{textAlign:"center"}}>{recordList()}</tbody>
                     </table>
                 </div>
             </div>

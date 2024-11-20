@@ -4,8 +4,9 @@ export default function Navbar() {
     return(
         <div>
             <nav style={{ backgroundColor: "#FF6F00", padding: "1rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                <NavLink to='/'>
+                <NavLink style={{display: "flex"}} to='/'>
                     <img src="../../public/web-app-manifest-512x512.png" alt="MongoDB logo" style={{ width: "50px", height: "auto" }} />
+                    <p style={{ fontSize:"2rem"}}>ReSource</p>
                 </NavLink>
                 <NavLink className="text-emerald-500 bg-neutral-900" to='/create' 
                     style={{
