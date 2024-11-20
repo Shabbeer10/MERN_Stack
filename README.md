@@ -15,7 +15,7 @@
 
 ## Introduction
 
-This is a simple MERN stack application. It leverages MongoDB, Express.js, React, and Node.js to provide a full-stack development experience.
+This is a simple MERN stack application. It leverages MongoDB, Express.js, React, and Node.js to provide a full-stack development experience. My focus was learning to implement these technologies together successfully first, rather than UI/UX.
 
 ## Technologies Used
 
@@ -27,8 +27,7 @@ This is a simple MERN stack application. It leverages MongoDB, Express.js, React
 ## Eventual Features
 
 - User authentication (sign up, login, logout)
-- Create, read, update, and delete (CRUD) operations
-- Responsive design
+- Responsive design and improved UI/UX
 
 ## Installation
 
@@ -58,5 +57,11 @@ To get started with this application, follow these steps:
 3. **Run the server with**:
 
    ```bash
-   node --env-file=config.env server
+   node --env-file=config.env index
+   ```
+
+4. **Run the client side with**:
+
+   ```bash
+   npm run dev
    ```

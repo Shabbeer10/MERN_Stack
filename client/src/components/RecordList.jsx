@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Record = (props) => (
     <tr>
@@ -8,13 +8,30 @@ const Record = (props) => (
         <td>{props.record.level}</td>
         <td>
             <div>
-                <Link className='bg-lime-600' to={`/edit/${props.record._id}`}>
-                Edit
+                <Link
+                    to={`/edit/${props.record._id}`}
+                    style={{
+                        backgroundColor: "green", 
+                        color: "white", 
+                        padding: "0.3rem 0.6rem", 
+                        borderRadius: "4px", 
+                        textDecoration: "none"
+                    }}
+                >
+                    Edit
                 </Link>
                 <button
-                type='button'
-                className='bg-red-600'
-                onClick={()=>{props.deleteRecord(props.record._id);}}>
+                    type='button'
+                    style={{
+                        backgroundColor: "#D32F2F", 
+                        color: "white", 
+                        border: "none", 
+                        padding: "0.3rem 0.6rem", 
+                        borderRadius: "4px", 
+                        cursor: "pointer"
+                    }}
+                    onClick={() => { props.deleteRecord(props.record._id); }}
+                >
                     Delete
                 </button>
             </div>
@@ -25,12 +42,11 @@ const Record = (props) => (
 export default function RecordList() {
     const [records, setRecords] = useState([]);
 
-    // Fetch records from database.
-    useEffect(()=>{
+    useEffect(() => {
         async function getRecords() {
             const response = await fetch('http://localhost:3000/record/');
             if (!response.ok) {
-                const message = `An error occured: ${response.statusText}`;
+                const message = `An error occurred: ${response.statusText}`;
                 console.error(message);
                 return;
             }
@@ -38,7 +54,6 @@ export default function RecordList() {
             setRecords(records);
         }
         getRecords();
-        return;
     }, [records.length]);
 
     async function deleteRecord(id) {
@@ -53,22 +68,22 @@ export default function RecordList() {
         return records.map((record) => {
             return (
                 <Record
-                key = {record._id}
-                record={record}
-                deleteRecord = {()=> deleteRecord(record._id)}
+                    key={record._id}
+                    record={record}
+                    deleteRecord={() => deleteRecord(record._id)}
                 />
             );
         });
     }
 
-    return(
+    return (
         <>
-            <h3>Employee Records</h3>
+            <h3 style={{ color: "#FF6F00" }}>Employee Records</h3>
             <div>
                 <div>
-                    <table>
+                    <table style={{ width: "100%", borderCollapse: "collapse" }}>
                         <thead>
-                            <tr>
+                            <tr style={{ backgroundColor: "#FF6F00", color: "white" }}>
                                 <th>Name</th>
                                 <th>Position</th>
                                 <th>Level</th>
@@ -80,6 +95,5 @@ export default function RecordList() {
                 </div>
             </div>
         </>
-    )
+    );
 }
-
