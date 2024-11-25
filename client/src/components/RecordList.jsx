@@ -1,7 +1,21 @@
 import {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import API_BASE_URL from '../../config';
 import './RecordList.css'
+
+// Define PropTypes for the Record component
+Record.propTypes = {
+    record: PropTypes.shape({
+        _id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        position: PropTypes.string.isRequired,
+        level: PropTypes.string.isRequired,
+    }).isRequired,
+    deleteRecord: PropTypes.func.isRequired,
+    index: PropTypes.number.isRequired,
+};
+
 const Record = (props) => (
     <tr className="record-row">
         <td>{props.record.name}</td>
