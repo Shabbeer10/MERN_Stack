@@ -11,5 +11,5 @@
 [[headers]]
 # Serve JavaScript files with the correct MIME type
   for = "*.js"
-  values:
+  [headers.values]
     Content-Type = "application/javascript"
