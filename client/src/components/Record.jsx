@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-
+import API_BASE_URL from "../../config";
 export default function Record() {
     const [form, setForm] = useState({
         name: "",
@@ -17,7 +17,7 @@ export default function Record() {
             if (!id) return;
             setIsNew(false);
             const response = await fetch(
-                `http://localhost:3000/record/${params.id.toString()}`
+                `${API_BASE_URL}/record/${params.id.toString()}`
             );
 
             if (!response.ok) {
@@ -49,13 +49,13 @@ export default function Record() {
         try {
             let response;
             if (isNew) {
-                response = await fetch("http://localhost:3000/record", {
+                response = await fetch(`${API_BASE_URL}/record`, {
                     method: "POST",
                     headers: { 'Content-type': 'application/json' },
                     body: JSON.stringify(person),
                 });
             } else {
-                response = await fetch(`http://localhost:3000/record/${params.id}`, {
+                response = await fetch(`${API_BASE_URL}/record/${params.id}`, {
                     method: "PATCH",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(person),
