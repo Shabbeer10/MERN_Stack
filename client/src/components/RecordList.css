@@ -1,0 +1,4 @@
+/* RecordList.css */
+.record-row:nth-child(even) {
+    background-color: lightgray
+}

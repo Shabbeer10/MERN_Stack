@@ -1,9 +1,9 @@
 import {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import API_BASE_URL from '../../config';
-
+import './RecordList.css'
 const Record = (props) => (
-    <tr>
+    <tr className="record-row">
         <td>{props.record.name}</td>
         <td>{props.record.position}</td>
         <td>{props.record.level}</td>
