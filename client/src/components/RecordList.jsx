@@ -83,11 +83,16 @@ export default function RecordList() {
 
     return (
         <>
-            <h2 style={{ fontSize:"2rem", color: "#FF6F00", textAlign: "center" }}>Employee Records</h2>
+            {loading ? (
+            <div style={{ textAlign: "center", fontSize: "1.5rem", color: "#FF6F00" }}>
+                Loading, please wait... dont hurt me...
+            </div>
+            ) : ( 
+            <h2 style={{ fontSize:"2rem", color: "#FF6F00", textAlign: "center" }}>Employee Records</h2>)}
             <div>
                 {loading ? (
-                    <div style={{ textAlign: "center", fontSize: "1.5rem", color: "#FF6F00" }}>
-                        Loading data, please wait...
+                    <div className="flex justify-center items-center">
+                        <div className="w-16 h-16 border-4 border-t-transparent border-orange-500 rounded-full animate-spin"></div>
                     </div>
                 ) : (
                     <div>
