@@ -43,6 +43,7 @@ const Record = (props) => (
 
 export default function RecordList() {
     const [records, setRecords] = useState([]);
+    const [loading, setLoading] = useState(true); // Loading state
 
     useEffect(() => {
         async function getRecords() {
@@ -50,10 +51,12 @@ export default function RecordList() {
             if (!response.ok) {
                 const message = `An error occurred: ${response.statusText}`;
                 console.error(message);
+                setLoading(false);
                 return;
             }
             const records = await response.json();
             setRecords(records);
+            setLoading(false);
         }
         getRecords();
     }, [records.length]);
@@ -82,19 +85,25 @@ export default function RecordList() {
         <>
             <h2 style={{ fontSize:"2rem", color: "#FF6F00", textAlign: "center" }}>Employee Records</h2>
             <div>
-                <div>
-                    <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                        <thead>
-                            <tr style={{ backgroundColor: "#FF6F00", color: "white" }}>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Level</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead >
-                        <tbody style={{textAlign:"center"}}>{recordList()}</tbody>
-                    </table>
-                </div>
+                {loading ? (
+                    <div style={{ textAlign: "center", fontSize: "1.5rem", color: "#FF6F00" }}>
+                        Loading data, please wait...
+                    </div>
+                ) : (
+                    <div>
+                        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                            <thead>
+                                <tr style={{ backgroundColor: "#FF6F00", color: "white" }}>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Level</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead >
+                            <tbody style={{ textAlign: "center" }}>{recordList()}</tbody>
+                        </table>
+                    </div>
+                )}
             </div>
         </>
     );
