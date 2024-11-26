@@ -15,7 +15,7 @@
 
 ## Introduction
 
-This is a simple MERN stack application. It leverages MongoDB, Express.js, React, and Node.js to provide a full-stack development experience. My focus was learning to implement these technologies together successfully first, rather than UI/UX.
+This is a simple MERN stack application. It leverages MongoDB, Express.js, React, and Node.js to provide a full-stack development experience. My focus was learning to implement these technologies together successfully first, rather than robust UI/UX. I focus on that as time goes on.
 
 ## Technologies Used
 
@@ -23,6 +23,12 @@ This is a simple MERN stack application. It leverages MongoDB, Express.js, React
 - **Express.js**: Web framework for Node.js
 - **React**: Frontend library for building user interfaces
 - **Node.js**: JavaScript runtime for server-side programming
+- **CORS**: Crucial for enabling web applications to interact with resources hosted on different domains
+
+## Features
+
+- Ability to Add, Edit and Delete records.
+- Data is updated on MongoDB database.
 
 ## Eventual Features
 
@@ -65,3 +71,7 @@ To get started with this application, follow these steps:
    ```bash
    npm run dev
    ```
+
+5. **OR visit the hosted site**
+
+   <https://resource5.netlify.app/>
