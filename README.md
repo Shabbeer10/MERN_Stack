@@ -1,6 +1,6 @@
 # MERN Stack Application
 
-![MERN Stack](https://)
+![ReSource](https://resource5.netlify.app/)
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@
 
 ## Introduction
 
-This is a simple MERN stack application. It leverages MongoDB, Express.js, React, and Node.js to provide a full-stack development experience. My focus was learning to implement these technologies together successfully first, rather than robust UI/UX. I focus on that as time goes on.
+This website - ReSource - is a simple MERN stack application. It leverages MongoDB, Express.js, React, and Node.js to provide a full-stack development experience. My focus was learning to implement these technologies together successfully first, rather than robust UI/UX. I focus on that as time goes on.
 
 ## Technologies Used
 
